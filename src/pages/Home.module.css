@@ -49,4 +49,5 @@
 }
 .button:hover {
   background: var(--hover);
+  cursor: pointer;
 }

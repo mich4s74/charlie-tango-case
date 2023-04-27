@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "./Home.module.css";
+import house_frontpage from "@/assets/house_frontpage.jpg";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -26,19 +28,23 @@ export default function Home() {
               </label>
               <label>
                 <span className={styles.label}>Estate Type</span>
-                <select name="estateType">
-                  <option value="1" selected required>
-                    Villa
-                  </option>
-                  <option value="2">Villalejlighed</option>
-                  <option value="3">Rækkehus</option>
+                <select type="text" name="estateTypes" required>
+                  <option name="Villa">Villa</option>
+                  <option name="Villalejlighed">Villalejlighed</option>
+                  <option name="Rækkehus">Rækkehus</option>
                 </select>
               </label>
               <button className={styles.button}>Find Buyers</button>
             </form>
           </div>
           <div>
-            <img src=".../src/assets/house_frontpage.jpg"></img>
+            <Image
+              src={house_frontpage.src}
+              width={500}
+              height={338}
+              alt="house on frontpage"
+              priority
+            />
           </div>
         </div>
       </div>
