@@ -46,7 +46,7 @@ export default function Home() {
             </label>
             <label>
               <span className={styles.label}>Estate Type</span>
-              <select name="estate_type">
+              <select name="estateType">
                 <option value="House" selected required>
                   House
                 </option>
