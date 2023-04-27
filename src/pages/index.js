@@ -34,9 +34,27 @@ export default function Home() {
           <form action="/buyers" method="GET" className={styles.form}>
             <label>
               <span className={styles.label}>Zip Code</span>
-              <input name="zipCode" required />
+              <input type="number" name="zipCode" required />
             </label>
-            <button className={styles.button}>Submit</button>
+            <label>
+              <span className={styles.label}>Price</span>
+              <input type="number" name="price" required />
+            </label>
+            <label>
+              <span className={styles.label}>Size (sqm.)</span>
+              <input type="number" name="size" required />
+            </label>
+            <label>
+              <span className={styles.label}>Estate Type</span>
+              <select name="estate_type">
+                <option value="House" selected required>
+                  House
+                </option>
+                <option value="Apartment">Apartment</option>
+                <option value="Raekkehus">Rækkehus</option>
+              </select>
+            </label>
+            <button className={styles.button}>Find Buyers</button>
           </form>
         </div>
       </div>
