@@ -20,6 +20,11 @@
   margin-bottom: 0;
 }
 
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .form {
   background-color: var(--dusty-blue-lighter);
   padding: 1rem;
@@ -36,6 +41,7 @@
 }
 
 .button {
+  margin-top: 1rem;
   padding: 0.5rem;
   background: var(--blue);
   color: var(--white);
