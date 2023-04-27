@@ -9,13 +9,20 @@
 
 .content {
   padding: 1rem;
-  background-color: var(--dusty-aqua-light);
-  border: 1px solid var(--dusty-aqua);
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 .content :first-child {
   margin-top: 0;
 }
 .content :last-child {
   margin-bottom: 0;
+}
+
+.content article {
+  background-color: var(--dusty-aqua-light);
+  border: 1px solid var(--dusty-aqua);
+  padding: 2rem;
 }
