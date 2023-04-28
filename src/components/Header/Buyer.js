@@ -11,6 +11,11 @@
 }
 */
 
+import iconfamily from "@/assets/icon-family.svg";
+import heart from "@/assets/icon-heart.svg";
+import Image from "next/image";
+import styles from "src/pages/Home.module.css";
+
 import React from "react";
 
 function Buyer(props) {
@@ -20,10 +25,30 @@ function Buyer(props) {
       <p>
         <b>Description:</b> {props.description}
       </p>
-      <p>Take over date: {props.takeoverDate}</p>
-      <p>
-        Family Size: {props.adults} Adult(s) + {props.children} children
-      </p>
+      <div className={styles.flex}>
+        <Image
+          className={styles.icon}
+          src={heart.src}
+          width={24}
+          height={24}
+          alt="family icon"
+          priority
+        />
+        <p>Take over date: {props.takeoverDate}</p>
+      </div>
+      <div className={styles.flex}>
+        <Image
+          className={styles.icon}
+          src={iconfamily.src}
+          width={24}
+          height={24}
+          alt="family icon"
+          priority
+        />
+        <p>
+          Family Size: {props.adults} Adult(s) + {props.children} children
+        </p>
+      </div>
     </article>
   );
 }

@@ -51,3 +51,15 @@
   background: var(--hover);
   cursor: pointer;
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-bottom: -14px;
+  margin-right: 5px;
+  filter: invert(71%) sepia(98%) saturate(590%) hue-rotate(346deg)
+    brightness(103%) contrast(99%);
+}
