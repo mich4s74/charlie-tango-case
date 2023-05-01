@@ -15,12 +15,18 @@ import iconfamily from "@/assets/icon-family.svg";
 import heart from "@/assets/icon-heart.svg";
 import Image from "next/image";
 import styles from "src/pages/Home.module.css";
+import { estateTypes } from "@/data/estateTypes";
 
 import React from "react";
 
 function Buyer(props) {
   return (
-    <article>
+    <article
+      onClick={() => {
+        props.toggleSelected(props.id);
+      }}
+      className={props.selected ? styles.selected : null}
+    >
       <h2>Buyer ID: {props.id}</h2>
       <p>
         <b>Description:</b> {props.description}

@@ -63,3 +63,8 @@
   filter: invert(71%) sepia(98%) saturate(590%) hue-rotate(346deg)
     brightness(103%) contrast(99%);
 }
+article.selected {
+  background-color: #4dc4d4;
+  padding: 2rem;
+  margin: 1rem;
+}

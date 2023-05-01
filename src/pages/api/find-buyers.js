@@ -10,10 +10,10 @@ export default function handler(req, res) {
   // You can open the browser, and go to http://localhost:3000/api/find-buyers to see the response.
 
   // Find the zip code from the query parameters, and use it to generate a list of (fake) buyer profiles.
-  const zipCode = parseInt(req.query.zipCode || "");
-  const price = parseInt(req.query.price || "");
-  const estateType = parseInt(req.query.estateType || "");
-  const size = parseInt(req.query.size || "");
+  const zipCode = parseInt(req.query.zipCode || "2200");
+  const price = parseInt(req.query.price || "2000000");
+  const estateType = parseInt(req.query.estateType || "1");
+  const size = parseInt(req.query.size || "300");
   const profilesForZipCode = generateBuyerProfiles({
     zipCode,
     price,
