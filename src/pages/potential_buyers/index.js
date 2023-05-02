@@ -1,9 +1,20 @@
 import Head from "next/head";
 import styles from "./Potential_buyers.module.css";
+import Router from "next/router";
 
 export default function potential_buyers(props) {
   const data = props.sellerInfo.selected;
   console.log(props.sellerInfo.selected);
+  function nextPage(e) {
+    e.preventDefault();
+    props.setSellerInfo((prev) => ({
+      ...prev,
+      name: e.target.elements.name.value,
+      email: e.target.elements.email.value,
+      phone: e.target.elements.phone.value,
+    }));
+    Router.push("/thanks");
+  }
 
   return (
     <>
@@ -25,7 +36,7 @@ export default function potential_buyers(props) {
       <div className="wrapper">
         <div className={styles.grid_container}>
           <div className={styles.content}>
-            <form action="/contact" method="GET" className={styles.form}>
+            <form onSubmit={nextPage} className={styles.form}>
               <label>
                 <span className={styles.label}>Name</span>
                 <input type="text" name="name" required />
@@ -41,7 +52,7 @@ export default function potential_buyers(props) {
               <label>
                 <br />
                 <br />
-                <input type="checkbox" value="consent" />
+                <input type="checkbox" value="consent" required />
                 <span className={styles.checkbox}>
                   Yes please, EDC may contact me with offers and information
                   related to the real estate market
