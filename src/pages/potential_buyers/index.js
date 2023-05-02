@@ -4,7 +4,6 @@ import Router from "next/router";
 
 export default function potential_buyers(props) {
   const data = props.sellerInfo.selected;
-  console.log(props.sellerInfo.selected);
   function nextPage(e) {
     e.preventDefault();
     props.setSellerInfo((prev) => ({
