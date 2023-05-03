@@ -7,7 +7,7 @@ import { useState } from "react";
 export async function getServerSideProps(context) {
   console.log(context);
   const res = await fetch(
-    `./api/find-buyers?zipCode=${context.query.zipCode}&price=${context.query.price}&estateType=${context.query.estateType}&size=${context.query.size}`
+    `https://charlie-tango-case-git-main-mich4s74.vercel.app/api/find-buyers?zipCode=${context.query.zipCode}&price=${context.query.price}&estateType=${context.query.estateType}&size=${context.query.size}`
   );
 
   const data = await res.json();
