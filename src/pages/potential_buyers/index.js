@@ -11,6 +11,7 @@ export default function potential_buyers(props) {
       name: e.target.elements.name.value,
       email: e.target.elements.email.value,
       phone: e.target.elements.phone.value,
+      consent: e.target.elements.consent,
     }));
     Router.push("/thanks");
   }

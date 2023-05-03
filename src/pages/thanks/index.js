@@ -7,6 +7,7 @@ export default function Thanks(props) {
   console.log(props.sellerInfo.name);
   console.log(props.sellerInfo.email);
   console.log(props.sellerInfo.phone);
+  console.log(props.sellerInfo.consent);
 
   return (
     <>

@@ -47,6 +47,9 @@ export default function Dashboard(props) {
             {clients.map((client) => (
               <p>{client.created_at}</p>
             ))}
+            {clients.map((client) => (
+              <p>{client.consent}</p>
+            ))}
           </div>
           <div className={styles.content}>
             <p>Dashboard</p>
